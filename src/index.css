@@ -1,0 +1,21 @@
+.myicons{
+    font-size: 3rem;
+    margin: auto;
+}
+.iconname{
+    margin: auto;
+    text-align: center;
+}
+.newscard_image{
+    height:50vh;
+}
+@media screen and (max-width:600px) {
+    .newscard{
+        width:90vw
+    }
+}
+@media screen and (max-width:400px){
+    .newscard{
+        width:95vw;
+    }
+}
