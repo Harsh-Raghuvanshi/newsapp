@@ -9,6 +9,9 @@
 .newscard_image{
     height:50vh;
 }
+.newscard{
+    width:50vw;
+}
 @media screen and (max-width:600px) {
     .newscard{
         width:90vw
@@ -18,4 +21,7 @@
     .newscard{
         width:95vw;
     }
+}
+.enlargeonhover{
+    box-shadow: 5px 5px 10px rgb(53, 52, 52);
 }

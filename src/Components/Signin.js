@@ -1,9 +1,40 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 export default function Signin() {
   return (
-    <div>
-      <h1>This is Sign in Page</h1>
-    </div>
+    <>
+      <form className="d-block m-auto mt-4" style={{width:"450px",maxWidth:"92vw"}} >
+        <div className=" mb-3">
+          <label for="exampleInputEmail1" className="form-label">
+            Email address
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" className="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div className="mb-3">
+          <label for="exampleInputPassword1" className="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary d-block mx-auto">
+          Submit
+        </button>
+        <small className="text-secondary">Don't have'n account <Link to='/signin'>Sign Up</Link></small>
+      </form>
+    </>
   )
 }

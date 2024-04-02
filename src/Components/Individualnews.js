@@ -1,12 +1,13 @@
 import React from "react";
 import defaultImage from "../Images/defaultImage.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsUp, faShare, faNewspaper, faLink } from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp, faShare,  faLink } from "@fortawesome/free-solid-svg-icons";
 export default function Individualnews(props) {
   let { allinfo } = props;
+  console.log(allinfo);
   return (
     <div>
-      <div className="card mx-auto mt-3 newscard" style={{ width: "50vw" }}>
+      <div className="card mx-auto mt-3 newscard">
         <div className="">
           {allinfo.urlToImage !== null ? (
             <img src={allinfo.urlToImage} className="card-img-top " alt="..." />
