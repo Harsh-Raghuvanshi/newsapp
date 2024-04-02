@@ -6,8 +6,8 @@ export default function AddNews() {
     fullUrl: "",
     title: "",
     description: "",
-    publishedAt:new Date().toLocaleDateString(),
-    urlToImage: null
+    publishedAt:new Date().toString(),
+    urlToImage: "",
   });
 
   // Function to handle input changes
@@ -18,9 +18,14 @@ export default function AddNews() {
       [name]: value
     }));
   };
-
+  function canshow(){
+    let {author,fullUrl,tittle,description}=newsDetails;
+    return (author!=="" && fullUrl!=="" && tittle!=="" && description!=="");
+  }
   return (
-    <div className="d-block mx-auto mt-5" style={{ width: "450px", maxWidth: "92vw" }}>
+    <div className="d-block mx-auto mt-3 " style={{ width: "450px", maxWidth: "92vw" }}>
+      <h1 className="fw-bloder text-center mt-0">Create News Post</h1>
+      <small className="text-secondary fw-bolder d-block text-center m-3">(After filling all details you can generate preview)</small>
       <input
         type="text"
         className="form-control mb-3"
@@ -62,7 +67,7 @@ export default function AddNews() {
         placeholder="Enter Image's Url"
       />
       {/* Button to trigger the modal */}
-      <button
+      {(canshow()?<div><button
         type="button"
         className="btn btn-outline-primary rounded-pill d-block mx-auto"
         data-bs-toggle="modal"
@@ -70,8 +75,8 @@ export default function AddNews() {
       >
         Generate Preview
       </button>
+      <PreviewModal newsDetails={newsDetails} /></div>:null)}
       
-      <PreviewModal newsDetails={newsDetails} />
     </div>
   );
 }

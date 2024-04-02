@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faShare,  faLink } from "@fortawesome/free-solid-svg-icons";
 export default function Individualnews(props) {
   let { allinfo } = props;
-  console.log(allinfo);
+  if(allinfo.urlToImage==="")allinfo.urlToImage=null;
   return (
     <div>
       <div className="card mx-auto mt-3 newscard">

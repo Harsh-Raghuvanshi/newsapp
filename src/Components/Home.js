@@ -15,9 +15,6 @@ function Home() {
         const response = await fetch(url);
         const data = await response.json();
         setArticles(data.articles);
-        console.log(response);
-        console.log(data);
-        console.log("here");
       } catch (error) {
         console.error("Error fetching news:", error);
       }

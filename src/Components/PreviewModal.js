@@ -14,15 +14,35 @@ export default function PreviewModal({ newsDetails }) {
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="previewModalLabel">Preview</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 className="modal-title" id="previewModalLabel">
+                Preview
+              </h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div className="modal-body">
               {/* Render Individualnews component with newsDetails */}
               <Individualnews allinfo={newsDetails} />
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button
+                type="button"
+                className="btn btn-outline-success float-lg-start"
+                data-bs-dismiss="modal"
+              >
+                Post
+              </button>
+              <button
+                type="button"
+                className="btn btn-outline-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
               {/* You can add additional buttons here if needed */}
             </div>
           </div>

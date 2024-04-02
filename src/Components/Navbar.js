@@ -40,18 +40,18 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/news">
+                <Link className="nav-link active" to="/news">
                   News
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/addnews">
+                <Link className="nav-link active" to="/addnews">
                   Add
                 </Link>
               </li>
               <li className="nav-item dropdown">
                 <div
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle active"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
