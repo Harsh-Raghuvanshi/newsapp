@@ -19,8 +19,8 @@ export default function AddNews() {
     }));
   };
   function canshow(){
-    let {author,fullUrl,tittle,description}=newsDetails;
-    return (author!=="" && fullUrl!=="" && tittle!=="" && description!=="");
+    let {author,fullUrl,title,description}=newsDetails;
+    return (author!=="" && fullUrl!=="" && title!=="" && description!=="");
   }
   return (
     <div className="d-block mx-auto mt-3 " style={{ width: "450px", maxWidth: "92vw" }}>
